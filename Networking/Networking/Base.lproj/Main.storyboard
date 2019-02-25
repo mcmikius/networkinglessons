@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,6 +33,9 @@
                                     <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Opf-6R-ktV"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8I0-BR-Q7K">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -41,6 +44,7 @@
                             <constraint firstItem="PdE-uL-DIr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="63V-lN-F1A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ky5-eK-F6i" secondAttribute="bottom" constant="20" id="9zL-9p-KLh"/>
                             <constraint firstItem="ky5-eK-F6i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="B5A-et-GsL"/>
+                            <constraint firstItem="8I0-BR-Q7K" firstAttribute="centerY" secondItem="PdE-uL-DIr" secondAttribute="centerY" id="CuC-1J-drn"/>
                             <constraint firstItem="cPm-EC-LX3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GG3-KO-nKr"/>
                             <constraint firstItem="PdE-uL-DIr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MDE-2d-xlp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPm-EC-LX3" secondAttribute="trailing" constant="16" id="QwG-h5-swa"/>
@@ -48,10 +52,12 @@
                             <constraint firstItem="PdE-uL-DIr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Z1Z-76-UBe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cPm-EC-LX3" secondAttribute="bottom" constant="20" id="hsR-VQ-EWM"/>
                             <constraint firstItem="cPm-EC-LX3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rMn-gZ-Wbk"/>
+                            <constraint firstItem="8I0-BR-Q7K" firstAttribute="centerX" secondItem="PdE-uL-DIr" secondAttribute="centerX" id="rw0-dx-NfC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="8I0-BR-Q7K" id="TGh-wW-Fly"/>
                         <outlet property="getImageButton" destination="ky5-eK-F6i" id="Fke-c6-CMa"/>
                         <outlet property="imageView" destination="PdE-uL-DIr" id="1s8-3g-aCa"/>
                         <outlet property="label" destination="cPm-EC-LX3" id="5dX-F2-UEo"/>
