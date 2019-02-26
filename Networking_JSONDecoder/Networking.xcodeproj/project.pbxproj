@@ -21,6 +21,7 @@
 		FB100F5B222519FF004559D2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F5A222519FF004559D2 /* CollectionViewCell.swift */; };
 		FB100F5D22251EE2004559D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F5C22251EE2004559D2 /* NetworkManager.swift */; };
 		FB100F5F2225255D004559D2 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F5E2225255D004559D2 /* ImageProperties.swift */; };
+		FB100F6122252DE9004559D2 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F6022252DE9004559D2 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FB100F5A222519FF004559D2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FB100F5C22251EE2004559D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FB100F5E2225255D004559D2 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
+		FB100F6022252DE9004559D2 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				A83C30202108401A00592AE4 /* AppDelegate.swift */,
 				FB100F5C22251EE2004559D2 /* NetworkManager.swift */,
+				FB100F6022252DE9004559D2 /* DataProvider.swift */,
 				A806CF93210B4EA300574064 /* ImageViewController.swift */,
 				FB100F522223F544004559D2 /* Course.swift */,
 				FB100F542223F997004559D2 /* WebSiteDescription.swift */,
@@ -123,6 +126,11 @@
 				TargetAttributes = {
 					A83C301C2108401A00592AE4 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -168,6 +176,7 @@
 				FB100F552223F997004559D2 /* WebSiteDescription.swift in Sources */,
 				FB100F5D22251EE2004559D2 /* NetworkManager.swift in Sources */,
 				A806CF94210B4EA300574064 /* ImageViewController.swift in Sources */,
+				FB100F6122252DE9004559D2 /* DataProvider.swift in Sources */,
 				FB100F59222519EE004559D2 /* MainCollectionViewController.swift in Sources */,
 				A8255C80214103450074F6D0 /* WebViewController.swift in Sources */,
 				A83C30212108401A00592AE4 /* AppDelegate.swift in Sources */,
