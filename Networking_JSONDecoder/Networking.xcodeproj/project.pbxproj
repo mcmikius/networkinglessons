@@ -20,6 +20,7 @@
 		FB100F59222519EE004559D2 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F58222519EE004559D2 /* MainCollectionViewController.swift */; };
 		FB100F5B222519FF004559D2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F5A222519FF004559D2 /* CollectionViewCell.swift */; };
 		FB100F5D22251EE2004559D2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F5C22251EE2004559D2 /* NetworkManager.swift */; };
+		FB100F5F2225255D004559D2 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB100F5E2225255D004559D2 /* ImageProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FB100F58222519EE004559D2 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		FB100F5A222519FF004559D2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FB100F5C22251EE2004559D2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FB100F5E2225255D004559D2 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				A83C302C2108401B00592AE4 /* Info.plist */,
 				FB100F58222519EE004559D2 /* MainCollectionViewController.swift */,
 				FB100F5A222519FF004559D2 /* CollectionViewCell.swift */,
+				FB100F5E2225255D004559D2 /* ImageProperties.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB100F5F2225255D004559D2 /* ImageProperties.swift in Sources */,
 				FB100F5B222519FF004559D2 /* CollectionViewCell.swift in Sources */,
 				FB100F532223F544004559D2 /* Course.swift in Sources */,
 				FB100F552223F997004559D2 /* WebSiteDescription.swift in Sources */,
