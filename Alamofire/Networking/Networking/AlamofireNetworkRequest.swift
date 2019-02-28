@@ -15,7 +15,6 @@ class AlamofireNetworkRequest {
         request(url, method: .get).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                
                 var courses = [Course]()
                 courses = Course.getArray(from: value)!
                 completion(courses)
