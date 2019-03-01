@@ -108,7 +108,7 @@ class AlamofireNetworkRequest {
     
     static func postRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         guard let url = URL(string: url) else { return }
-        let userData: [String: Any] = ["name": "Network Requests", "link": "https://swiftbook.ru/contents/our-first-applications/", "imageUrl": "https://swiftbook.ru/wp-content/uploads/sites/2/2018/08/notifications-course-with-background.png", "numberOfLessons": 18, "numberOfTests": 10]
+        let userData: [String: Any] = ["name": "Network Requests", "link": "https://swiftbook.ru/contents/our-first-applications/", "imageUrl": "https://swiftbook.ru/wp-content/uploads/sites/2/2018/08/notifications-course-with-background.png", "numberOfLessons": "18", "numberOfTests": "10"]
         request(url, method: .post, parameters: userData).responseJSON { (responseJSON) in
             guard let statusCode = responseJSON.response?.statusCode else { return }
             print("statusCode ", statusCode)
@@ -127,7 +127,7 @@ class AlamofireNetworkRequest {
     
     static func putRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         guard let url = URL(string: url) else { return }
-        let userData: [String: Any] = ["name": "Network Requests with Alamofire", "link": "https://swiftbook.ru/contents/our-first-applications/", "imageUrl": "https://swiftbook.ru/wp-content/uploads/sites/2/2018/08/notifications-course-with-background.png", "numberOfLessons": 18, "numberOfTests": 10]
+        let userData: [String: Any] = ["name": "Network Requests with Alamofire", "link": "https://swiftbook.ru/contents/our-first-applications/", "imageUrl": "https://swiftbook.ru/wp-content/uploads/sites/2/2018/08/notifications-course-with-background.png", "numberOfLessons": "18", "numberOfTests": "10"]
         request(url, method: .put, parameters: userData).responseJSON { (responseJSON) in
             guard let statusCode = responseJSON.response?.statusCode else { return }
             print("statusCode ", statusCode)
