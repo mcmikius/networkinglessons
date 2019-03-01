@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T1E-1j-zMM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T1E-1j-zMM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -266,6 +266,8 @@
                         <segue destination="Okz-m4-eD1" kind="show" identifier="OurCoursesWithAlamofire" id="o0l-Pa-VHO"/>
                         <segue destination="eEq-kV-HBK" kind="show" identifier="ResponseData" id="Z0t-Fs-l34"/>
                         <segue destination="eEq-kV-HBK" kind="show" identifier="LargeImage" id="eRk-bd-jCn"/>
+                        <segue destination="Okz-m4-eD1" kind="show" identifier="PostRequest" id="YVi-WN-vpq"/>
+                        <segue destination="Okz-m4-eD1" kind="show" identifier="PutRequest" id="2yH-XU-CXE"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNp-Q0-GA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -292,7 +294,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o0l-Pa-VHO"/>
+        <segue reference="2yH-XU-CXE"/>
         <segue reference="eRk-bd-jCn"/>
     </inferredMetricsTieBreakers>
 </document>
