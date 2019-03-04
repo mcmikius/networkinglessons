@@ -28,6 +28,7 @@
 		A8FB49DE2161E34000026A1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB49DD2161E34000026A1A /* LoginViewController.swift */; };
 		A8FB4A422164AFED00026A1A /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB4A412164AFED00026A1A /* UserProfileVC.swift */; };
 		A8FB4A462164D61200026A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB4A452164D61100026A1A /* Assets.xcassets */; };
+		FB1E5BD9222D0317008CCE43 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E5BD8222D0317008CCE43 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		A8FB4A452164D61100026A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA5AFBA7A7672202CC23B8C9 /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97F647D1D758D71147889E5 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
+		FB1E5BD8222D0317008CCE43 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				A8255C8321410AFA0074F6D0 /* CoursesViewController.swift */,
 				A8493E7A214924F1004DE8A8 /* ImageProperties.swift */,
 				A895579D214278DB00355357 /* Course.swift */,
+				FB1E5BD8222D0317008CCE43 /* UserProfile.swift */,
 				A895579F2142808400355357 /* WebsiteDescription.swift */,
 				A8255C8521410DFE0074F6D0 /* TableViewCell.swift */,
 				A8255C7F214103450074F6D0 /* WebViewController.swift */,
@@ -243,7 +246,9 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -252,7 +257,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -282,6 +289,7 @@
 				A8255C8621410DFE0074F6D0 /* TableViewCell.swift in Sources */,
 				A8255C8421410AFA0074F6D0 /* CoursesViewController.swift in Sources */,
 				A8FB49DC2161E2D200026A1A /* Extensions.swift in Sources */,
+				FB1E5BD9222D0317008CCE43 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,7 +59,19 @@ extension UserProfileVC: FBSDKLoginButtonDelegate {
     }
     
     private func openLoginViewController() {
-        
+        do {
+            try Auth.auth().signOut()
+            DispatchQueue.main.async {
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                self.present(loginViewController, animated: true)
+                return
+            }
+        } catch let error {
+            print("Failed to sign out with error: ", error.localizedDescription)
+        }
         
     }
+    
+    
 }
