@@ -6,6 +6,7 @@
 import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class UserProfileVC: UIViewController {
     
@@ -18,13 +19,22 @@ class UserProfileVC: UIViewController {
         loginButton.delegate = self
         return loginButton
     }()
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        
+        userNameLabel.isHidden = true
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchingUserData()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -72,6 +82,22 @@ extension UserProfileVC: FBSDKLoginButtonDelegate {
         }
         
     }
-    
+    private func fetchingUserData() {
+        if Auth.auth().currentUser != nil {
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            Database.database().reference()
+            .child("users")
+            .child(uid)
+                .observeSingleEvent(of: .value, with: { (snapshot) in
+                    guard let userData = snapshot.value as? [String: Any] else { return }
+                    self.activityIndicator.stopAnimating()
+                    self.userNameLabel.isHidden = false
+                    let currentUser = CurrentUser(uid: uid, data: userData)
+                    self.userNameLabel.text = "\(currentUser?.name ?? "Noname") Logged in with Facebook"
+                }) { (error) in
+                    print(error)
+            }
+        }
+    }
     
 }

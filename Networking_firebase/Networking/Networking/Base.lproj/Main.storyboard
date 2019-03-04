@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ke-B3-ogH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ke-B3-ogH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -360,10 +360,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="wQF-jm-WNO">
+                                <rect key="frame" x="177.5" y="189" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Znm-3N-L5w"/>
+                                    <constraint firstAttribute="width" constant="20" id="nWE-gc-mdq"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wQF-jm-WNO" firstAttribute="centerY" secondItem="31m-nu-b37" secondAttribute="centerY" id="SnR-BC-lmJ"/>
                             <constraint firstItem="31m-nu-b37" firstAttribute="top" secondItem="USl-jI-5Or" secondAttribute="top" constant="150" id="b2p-F4-AmL"/>
+                            <constraint firstItem="wQF-jm-WNO" firstAttribute="centerX" secondItem="31m-nu-b37" secondAttribute="centerX" id="e1O-XI-dlt"/>
                             <constraint firstItem="31m-nu-b37" firstAttribute="centerX" secondItem="USl-jI-5Or" secondAttribute="centerX" id="xe3-Hd-ZsI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="USl-jI-5Or"/>
@@ -371,6 +380,10 @@
                     <tabBarItem key="tabBarItem" image="profile" id="fIU-bw-xhY">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-15"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="wQF-jm-WNO" id="KPA-EG-7yw"/>
+                        <outlet property="userNameLabel" destination="31m-nu-b37" id="nXb-30-JcM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78I-Nx-eFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,6 +395,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4ke-B3-ogH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tkh-Oi-Qcm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

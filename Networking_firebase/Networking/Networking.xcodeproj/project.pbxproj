@@ -29,6 +29,7 @@
 		A8FB4A422164AFED00026A1A /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB4A412164AFED00026A1A /* UserProfileVC.swift */; };
 		A8FB4A462164D61200026A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB4A452164D61100026A1A /* Assets.xcassets */; };
 		FB1E5BD9222D0317008CCE43 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E5BD8222D0317008CCE43 /* UserProfile.swift */; };
+		FB1E5BDB222D1656008CCE43 /* CarrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E5BDA222D1656008CCE43 /* CarrentUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		AA5AFBA7A7672202CC23B8C9 /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97F647D1D758D71147889E5 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 		FB1E5BD8222D0317008CCE43 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		FB1E5BDA222D1656008CCE43 /* CarrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrentUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				A8493E762147DC20004DE8A8 /* NetworkManager.swift */,
 				A855BC1B214F71FE00075CAE /* DataProvider.swift */,
 				A8493E722147D7CA004DE8A8 /* CollectionViewCell.swift */,
+				FB1E5BDA222D1656008CCE43 /* CarrentUser.swift */,
 				A806CF93210B4EA300574064 /* ImageViewController.swift */,
 				A8255C8321410AFA0074F6D0 /* CoursesViewController.swift */,
 				A8493E7A214924F1004DE8A8 /* ImageProperties.swift */,
@@ -287,6 +290,7 @@
 				A83C30212108401A00592AE4 /* AppDelegate.swift in Sources */,
 				A8493E712147D7B7004DE8A8 /* MainViewController.swift in Sources */,
 				A8255C8621410DFE0074F6D0 /* TableViewCell.swift in Sources */,
+				FB1E5BDB222D1656008CCE43 /* CarrentUser.swift in Sources */,
 				A8255C8421410AFA0074F6D0 /* CoursesViewController.swift in Sources */,
 				A8FB49DC2161E2D200026A1A /* Extensions.swift in Sources */,
 				FB1E5BD9222D0317008CCE43 /* UserProfile.swift in Sources */,
