@@ -16,9 +16,9 @@ class UserProfileVC: UIViewController {
     lazy var logoutButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 32,
-                                   y: view.frame.height - 172,
-                                   width: view.frame.width - 64,
-                                   height: 50)
+                              y: view.frame.height - 172,
+                              width: view.frame.width - 64,
+                              height: 50)
         button.backgroundColor = UIColor(hexValue: "#3B5999", alpha: 1)
         button.setTitle("Log Out", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -31,10 +31,10 @@ class UserProfileVC: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         userNameLabel.isHidden = true
         setupViews()
@@ -76,16 +76,23 @@ extension UserProfileVC {
     }
     private func fetchingUserData() {
         if Auth.auth().currentUser != nil {
-            guard let uid = Auth.auth().currentUser?.uid else { return }
-            Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let userName = Auth.auth().currentUser?.displayName {
+                activityIndicator.stopAnimating()
+                userNameLabel.isHidden = false
+                userNameLabel.text = getProviderData(with: userName)
+            } else {
+                guard let uid = Auth.auth().currentUser?.uid else { return }
+                Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
                     guard let userData = snapshot.value as? [String: Any] else { return }
                     self.activityIndicator.stopAnimating()
                     self.userNameLabel.isHidden = false
                     self.currentUser = CurrentUser(uid: uid, data: userData)
-                    self.userNameLabel.text = self.getProviderData()
+                    self.userNameLabel.text = self.getProviderData(with: self.currentUser?.name ?? "Noname")
                 }) { (error) in
                     print(error)
+                }
             }
+            
         }
     }
     @objc private func signOut() {
@@ -100,13 +107,17 @@ extension UserProfileVC {
                     GIDSignIn.sharedInstance()?.signOut()
                     print("User did log out of google")
                     openLoginViewController()
+                case "password":
+                    try! Auth.auth().signOut()
+                    print("User did sign out")
+                    openLoginViewController()
                 default:
                     print("User is signed in with \(userInfo.providerID)")
                 }
             }
         }
     }
-    private func getProviderData() -> String {
+    private func getProviderData(with user: String) -> String {
         var greetings = ""
         if let providerData = Auth.auth().currentUser?.providerData {
             for userInfo in providerData {
@@ -115,11 +126,13 @@ extension UserProfileVC {
                     provider = "Facebook"
                 case "google.com":
                     provider = "Google"
+                case "password":
+                    provider = "Email"
                 default:
                     break
                 }
             }
-            greetings = "\(currentUser?.name ?? "Noname") Logged in with \(provider!)"
+            greetings = "\(user) Logged in with \(provider!)"
         }
         return greetings
     }
