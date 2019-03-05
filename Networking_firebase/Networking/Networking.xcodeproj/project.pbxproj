@@ -23,13 +23,13 @@
 		A855BC4221526FF700075CAE /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855BC4121526FF700075CAE /* AlamofireNetworkRequest.swift */; };
 		A895579E214278DB00355357 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895579D214278DB00355357 /* Course.swift */; };
 		A89557A02142808500355357 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895579F2142808400355357 /* WebsiteDescription.swift */; };
-		A8D4EBC221675CE0002E4A4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8D4EBC121675CE0002E4A4A /* GoogleService-Info.plist */; };
 		A8FB49DC2161E2D200026A1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB49DB2161E2D200026A1A /* Extensions.swift */; };
 		A8FB49DE2161E34000026A1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB49DD2161E34000026A1A /* LoginViewController.swift */; };
 		A8FB4A422164AFED00026A1A /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB4A412164AFED00026A1A /* UserProfileVC.swift */; };
 		A8FB4A462164D61200026A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8FB4A452164D61100026A1A /* Assets.xcassets */; };
 		FB1E5BD9222D0317008CCE43 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E5BD8222D0317008CCE43 /* UserProfile.swift */; };
 		FB1E5BDB222D1656008CCE43 /* CarrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E5BDA222D1656008CCE43 /* CarrentUser.swift */; };
+		FB1E5BDD222D5E30008CCE43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1E5BDC222D5E30008CCE43 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,6 @@
 		A855BC4121526FF700075CAE /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		A895579D214278DB00355357 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		A895579F2142808400355357 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
-		A8D4EBC121675CE0002E4A4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8FB49DB2161E2D200026A1A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A8FB49DD2161E34000026A1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8FB4A40216350EC00026A1A /* Networking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Networking.entitlements; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		F97F647D1D758D71147889E5 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 		FB1E5BD8222D0317008CCE43 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		FB1E5BDA222D1656008CCE43 /* CarrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrentUser.swift; sourceTree = "<group>"; };
+		FB1E5BDC222D5E30008CCE43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 				A8FB4A452164D61100026A1A /* Assets.xcassets */,
 				A83C30292108401B00592AE4 /* LaunchScreen.storyboard */,
 				A83C302C2108401B00592AE4 /* Info.plist */,
-				A8D4EBC121675CE0002E4A4A /* GoogleService-Info.plist */,
+				FB1E5BDC222D5E30008CCE43 /* GoogleService-Info.plist */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83C302B2108401B00592AE4 /* LaunchScreen.storyboard in Resources */,
-				A8D4EBC221675CE0002E4A4A /* GoogleService-Info.plist in Resources */,
+				FB1E5BDD222D5E30008CCE43 /* GoogleService-Info.plist in Resources */,
 				A8FB4A462164D61200026A1A /* Assets.xcassets in Resources */,
 				A83C30262108401A00592AE4 /* Main.storyboard in Resources */,
 			);

@@ -161,6 +161,10 @@ extension LoginViewController: GIDSignInDelegate, GIDSignInUIDelegate {
             return
         }
         print("Successfully loged into Google")
+        if let userName = user.profile.name, let userEmail = user.profile.email {
+            let userData = ["name": userName, "email": userEmail]
+            userProfile = UserProfile(data: userData)
+        }
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
@@ -169,7 +173,8 @@ extension LoginViewController: GIDSignInDelegate, GIDSignInUIDelegate {
                 return
             }
             print("Successfully logged into Firebase with Google")
-            self.openMainViewController()
+            self.saveIntoFirebase()
+            
         }
     }
 }
