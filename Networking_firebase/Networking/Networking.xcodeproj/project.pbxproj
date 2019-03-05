@@ -30,6 +30,8 @@
 		FB1E5BD9222D0317008CCE43 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E5BD8222D0317008CCE43 /* UserProfile.swift */; };
 		FB1E5BDB222D1656008CCE43 /* CarrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E5BDA222D1656008CCE43 /* CarrentUser.swift */; };
 		FB1E5BDD222D5E30008CCE43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1E5BDC222D5E30008CCE43 /* GoogleService-Info.plist */; };
+		FBC1CEEA222E626400F5A82E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1CEE9222E626300F5A82E /* SignInViewController.swift */; };
+		FBC1CEEC222E630600F5A82E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1CEEB222E630600F5A82E /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		FB1E5BD8222D0317008CCE43 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		FB1E5BDA222D1656008CCE43 /* CarrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrentUser.swift; sourceTree = "<group>"; };
 		FB1E5BDC222D5E30008CCE43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBC1CEE9222E626300F5A82E /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FBC1CEEB222E630600F5A82E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				A8FB4A40216350EC00026A1A /* Networking.entitlements */,
 				A83C30202108401A00592AE4 /* AppDelegate.swift */,
 				A8FB49DD2161E34000026A1A /* LoginViewController.swift */,
+				FBC1CEE9222E626300F5A82E /* SignInViewController.swift */,
+				FBC1CEEB222E630600F5A82E /* SignUpViewController.swift */,
 				A8493E702147D7B7004DE8A8 /* MainViewController.swift */,
 				A8FB4A412164AFED00026A1A /* UserProfileVC.swift */,
 				A855BC4121526FF700075CAE /* AlamofireNetworkRequest.swift */,
@@ -310,10 +316,12 @@
 				A89557A02142808500355357 /* WebsiteDescription.swift in Sources */,
 				A8FB4A422164AFED00026A1A /* UserProfileVC.swift in Sources */,
 				A806CF94210B4EA300574064 /* ImageViewController.swift in Sources */,
+				FBC1CEEA222E626400F5A82E /* SignInViewController.swift in Sources */,
 				A855BC1C214F71FE00075CAE /* DataProvider.swift in Sources */,
 				A8255C80214103450074F6D0 /* WebViewController.swift in Sources */,
 				A83C30212108401A00592AE4 /* AppDelegate.swift in Sources */,
 				A8493E712147D7B7004DE8A8 /* MainViewController.swift in Sources */,
+				FBC1CEEC222E630600F5A82E /* SignUpViewController.swift in Sources */,
 				A8255C8621410DFE0074F6D0 /* TableViewCell.swift in Sources */,
 				FB1E5BDB222D1656008CCE43 /* CarrentUser.swift in Sources */,
 				A8255C8421410AFA0074F6D0 /* CoursesViewController.swift in Sources */,

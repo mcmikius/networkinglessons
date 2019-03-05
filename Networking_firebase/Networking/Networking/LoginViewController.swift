@@ -50,6 +50,15 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(handleCustomGoogleLogin), for: .touchUpInside)
         return loginButton
     }()
+    
+    lazy var signInWithEmail: UIButton = {
+        
+        let loginButton = UIButton()
+        loginButton.frame = CGRect(x: 32, y: 360 + 80 + 80 + 80 + 80, width: view.frame.width - 64, height: 50)
+        loginButton.setTitle("Sign In with Email", for: .normal)
+        loginButton.addTarget(self, action: #selector(openSignInViewController), for: .touchUpInside)
+        return loginButton
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +81,14 @@ class LoginViewController: UIViewController {
         view.addSubview(customFBLoginButton)
         view.addSubview(googleLoginButton)
         view.addSubview(customGoogleLoginButton)
+        view.addSubview(signInWithEmail)
+    }
+    private func openMainViewController() {
+        dismiss(animated: true)
+    }
+    
+    @objc private func openSignInViewController() {
+        performSegue(withIdentifier: "SignIn", sender: self)
     }
 
 }
@@ -97,9 +114,6 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
         print("Did log out of facebook")
     }
     
-    private func openMainViewController() {
-        dismiss(animated: true)
-    }
     
     @objc private func handleCustomFBLogin() {
         
