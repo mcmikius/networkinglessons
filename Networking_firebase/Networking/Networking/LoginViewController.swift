@@ -37,6 +37,19 @@ class LoginViewController: UIViewController {
         loginButton.frame = CGRect(x: 32, y: 360 + 80 + 80, width: view.frame.width - 64, height: 50)
         return loginButton
     }()
+    
+    lazy var customGoogleLoginButton: UIButton = {
+        
+        let loginButton = UIButton()
+        loginButton.frame = CGRect(x: 32, y: 360 + 80 + 80 + 80, width: view.frame.width - 64, height: 50)
+        loginButton.backgroundColor = .white
+        loginButton.setTitle("Login with Google", for: .normal)
+        loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        loginButton.setTitleColor(.gray, for: .normal)
+        loginButton.layer.cornerRadius = 4
+        loginButton.addTarget(self, action: #selector(handleCustomGoogleLogin), for: .touchUpInside)
+        return loginButton
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +71,7 @@ class LoginViewController: UIViewController {
         view.addSubview(fbLoginButton)
         view.addSubview(customFBLoginButton)
         view.addSubview(googleLoginButton)
+        view.addSubview(customGoogleLoginButton)
     }
 
 }
@@ -176,5 +190,8 @@ extension LoginViewController: GIDSignInDelegate, GIDSignInUIDelegate {
             self.saveIntoFirebase()
             
         }
+    }
+    @objc private func handleCustomGoogleLogin() {
+        GIDSignIn.sharedInstance()?.signIn()
     }
 }
